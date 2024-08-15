@@ -19,7 +19,6 @@ const changeScene = () => {
     //  Call the changeScene method defined in the `MainMenu`, `Game` and `GameOver` Scenes
     scene.changeScene();
   }
-
 }
 
 const moveSprite = () => {
@@ -62,7 +61,6 @@ const addSprite = () => {
       repeat: -1
     });
   }
-
 }
 
 // Event emitted from the PhaserGame component

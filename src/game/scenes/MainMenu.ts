@@ -4,10 +4,10 @@ import { EventBus } from '../EventBus';
 
 export class MainMenu extends Scene
 {
-    background: GameObjects.Image;
-    logo: GameObjects.Image;
-    title: GameObjects.Text;
-    logoTween: Phaser.Tweens.Tween | null;
+    background: GameObjects.Image | null = null;
+    logo: GameObjects.Image | null = null;
+    title: GameObjects.Text | null = null;
+    logoTween: Phaser.Tweens.Tween | null | null = null;
 
     constructor ()
     {
@@ -62,7 +62,7 @@ export class MainMenu extends Scene
                 yoyo: true,
                 repeat: -1,
                 onUpdate: () => {
-                    if (vueCallback)
+                    if (vueCallback && this.logo)
                     {
                         vueCallback({
                             x: Math.floor(this.logo.x),
